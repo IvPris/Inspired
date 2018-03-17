@@ -7,18 +7,18 @@ import java.util.Date;
  */
 
 public class InspiringPerson {
-    public String name;
-    public Date birth;
-    public Date death;
-    public String about;
+    private String name;
+    private String birth=null;
+    private String death=null;
+    private String about;
 
     public void setName(String n){
         name=n;
     }
-    public void setBirth(Date d){
+    public void setBirth(String d){
         birth=d;
     }
-    public void setDeath(Date d){
+    public void setDeath(String d){
         death=d;
     }
     public void setAbout(String a){
@@ -27,13 +27,27 @@ public class InspiringPerson {
     public void updateName(String n){
         name=n;
     }
-    public void updateBirth(Date b){
+    public void updateBirth(String b){
         birth=b;
     }
-    public void updateDeath(Date d){
+    public void updateDeath(String d){
         death=d;
     }
     public void updateAbout(String a){
         about=a;
     }
+    public String getName(){
+        return name;
+    }
+    public String getBirthDisplay(){
+        if(death == null)
+        return birth + " - ...";
+        else
+            return birth+" - "+death;
+    }
+    public String getAbout(){
+        return about;
+    }
+
+
 }
