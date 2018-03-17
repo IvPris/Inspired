@@ -6,7 +6,9 @@
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:id="@+id/photo1"/>
+        android:id="@+id/photo1"
+        android:scaleType="centerCrop"
+        android:layout_margin="10dp"/>
     <TextView
         android:id="@+id/name1"
         android:layout_width="match_parent"
@@ -35,7 +37,8 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_below="@id/photo1"
-        android:layout_marginTop="10dp"/>
+        android:layout_margin="10dp"
+        android:scaleType="centerCrop"/>
     <TextView
         android:id="@+id/name2"
         android:layout_width="match_parent"
@@ -65,7 +68,8 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_below="@id/photo2"
-        android:layout_marginTop="10dp"/>
+        android:layout_margin="10dp"
+        android:scaleType="centerCrop"/>
     <TextView
         android:id="@+id/name3"
         android:layout_width="match_parent"
