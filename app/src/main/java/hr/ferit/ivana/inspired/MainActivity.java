@@ -2,8 +2,10 @@ package hr.ferit.ivana.inspired;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -53,7 +55,50 @@ public class MainActivity extends Activity {
         Ritchie.setDeath("12.10.2011.");
         Ritchie.setAbout("Američki računalni znanstvenik");
 
+        photo1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                displayQuote(1);
+            }
+        });
+
+        photo1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                displayQuote(1);
+            }
+        });
+
+        photo2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                displayQuote(2);
+            }
+        });
+
+        photo3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                displayQuote(3);
+            }
+        });
+
         showData(Turing, Lovelace, Ritchie);
+    }
+
+    private void displayQuote(int i) {
+        String message="";
+        if (i==1){
+            message = "“Sometimes it is the people no one can imagine anything of who do the things no one can imagine.”";
+        }
+        else if (i==2){
+            message = "“That brain of mine is something more than merely mortal, as time will show.”";
+        }
+        else {
+            message = "“UNIX is basically a simple operating system, but you have to be a genius to understand the simplicity”";
+        }
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+
     }
 
     private void showData(InspiringPerson p1, InspiringPerson p2, InspiringPerson p3) {

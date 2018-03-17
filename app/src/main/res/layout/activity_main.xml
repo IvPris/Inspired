@@ -11,13 +11,17 @@
         android:id="@+id/name1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/photo1" />
+        android:layout_toEndOf="@id/photo1"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
     <TextView
         android:id="@+id/birth1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_toEndOf="@id/photo1"
-        android:layout_below="@id/name1"/>
+        android:layout_below="@id/name1"
+        android:textStyle="bold"/>
     <TextView
         android:id="@+id/about1"
         android:layout_width="match_parent"
@@ -37,13 +41,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_toEndOf="@id/photo2"
-        android:layout_alignTop="@id/photo2"/>
+        android:layout_alignTop="@id/photo2"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
     <TextView
         android:id="@+id/birth2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_toEndOf="@id/photo2"
-        android:layout_below="@id/name2"/>
+        android:layout_below="@id/name2"
+        android:textStyle="bold"/>
     <TextView
         android:id="@+id/about2"
         android:layout_width="match_parent"
@@ -63,14 +71,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_toEndOf="@id/photo3"
-        android:layout_alignTop="@id/photo3"/>
-
+        android:layout_alignTop="@id/photo3"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
     <TextView
         android:id="@+id/birth3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_toEndOf="@id/photo3"
-        android:layout_below="@id/name3"/>
+        android:layout_below="@id/name3"
+        android:textStyle="bold"/>
     <TextView
         android:id="@+id/about3"
         android:layout_width="match_parent"
