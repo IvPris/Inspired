@@ -42,18 +42,21 @@ public class MainActivity extends Activity {
         Turing.setBirth("23.6.1912.");
         Turing.setDeath("7.6.1954.");
         Turing.setAbout("Britanski matematičar, kriptograf, teoretičar računarstva");
+        Turing.setPhoto(R.drawable.alanturing);
 
         InspiringPerson Lovelace = new InspiringPerson();
         Lovelace.setName("Ada Lovelace");
         Lovelace.setBirth("10.12.1815.");
         Lovelace.setDeath("27.11.1852.");
         Lovelace.setAbout("Britanska matematičarka");
+        Lovelace.setPhoto(R.drawable.adalovelace);
 
         InspiringPerson Ritchie = new InspiringPerson();
         Ritchie.setName("Dennis Ritchie");
         Ritchie.setBirth("9.9.1941.");
         Ritchie.setDeath("12.10.2011.");
         Ritchie.setAbout("Američki računalni znanstvenik");
+        Ritchie.setPhoto(R.drawable.dennisritchie);
 
         photo1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,27 +106,21 @@ public class MainActivity extends Activity {
 
     private void showData(InspiringPerson p1, InspiringPerson p2, InspiringPerson p3) {
         //Turing
-        name1 = findViewById(R.id.name1);
         name1.setText(p1.getName());
-        birth1 = findViewById(R.id.birth1);
         birth1.setText(p1.getBirthDisplay());
-        about1 = findViewById(R.id.about1);
         about1.setText(p1.getAbout());
+        photo1.setImageResource(p1.getPhoto());
 
         //Lovelace
-        name2 = findViewById(R.id.name2);
         name2.setText(p2.getName());
-        birth2 = findViewById(R.id.birth2);
         birth2.setText(p2.getBirthDisplay());
-        about2 = findViewById(R.id.about2);
         about2.setText(p2.getAbout());
+        photo2.setImageResource(p2.getPhoto());
 
         //Ritchie
-        name3 = findViewById(R.id.name3);
         name3.setText(p3.getName());
-        birth3 = findViewById(R.id.birth3);
         birth3.setText(p3.getBirthDisplay());
-        about3 = findViewById(R.id.about3);
         about3.setText(p3.getAbout());
+        photo3.setImageResource(p3.getPhoto());
     }
 }

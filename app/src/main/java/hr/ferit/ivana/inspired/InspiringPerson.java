@@ -1,5 +1,7 @@
 package hr.ferit.ivana.inspired;
 
+import android.graphics.Bitmap;
+
 import java.util.Date;
 
 /**
@@ -11,6 +13,7 @@ public class InspiringPerson {
     private String birth=null;
     private String death=null;
     private String about;
+    private int photo;
 
     public void setName(String n){
         name=n;
@@ -24,6 +27,9 @@ public class InspiringPerson {
     public void setAbout(String a){
         about=a;
     }
+    public void setPhoto(int p){
+        photo=p;
+    }
     public String getName(){
         return name;
     }
@@ -35,6 +41,9 @@ public class InspiringPerson {
     }
     public String getAbout(){
         return about;
+    }
+    public int getPhoto(){
+        return photo;
     }
 
 
