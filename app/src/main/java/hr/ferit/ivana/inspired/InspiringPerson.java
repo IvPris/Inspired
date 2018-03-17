@@ -24,18 +24,6 @@ public class InspiringPerson {
     public void setAbout(String a){
         about=a;
     }
-    public void updateName(String n){
-        name=n;
-    }
-    public void updateBirth(String b){
-        birth=b;
-    }
-    public void updateDeath(String d){
-        death=d;
-    }
-    public void updateAbout(String a){
-        about=a;
-    }
     public String getName(){
         return name;
     }

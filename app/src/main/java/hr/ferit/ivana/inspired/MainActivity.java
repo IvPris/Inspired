@@ -11,10 +11,22 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends Activity {
-    @BindView(R.id.name) TextView name;
-    @BindView(R.id.birth) TextView birth;
-    @BindView(R.id.about) TextView about;
-    @BindView(R.id.photo) ImageView photo;
+    @BindView(R.id.name1) TextView name1;
+    @BindView(R.id.birth1) TextView birth1;
+    @BindView(R.id.about1) TextView about1;
+    @BindView(R.id.photo1) ImageView photo1;
+
+
+    @BindView(R.id.name2) TextView name2;
+    @BindView(R.id.birth2) TextView birth2;
+    @BindView(R.id.about2) TextView about2;
+    @BindView(R.id.photo2) ImageView photo2;
+
+
+    @BindView(R.id.name3) TextView name3;
+    @BindView(R.id.birth3) TextView birth3;
+    @BindView(R.id.about3) TextView about3;
+    @BindView(R.id.photo3) ImageView photo3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,15 +41,44 @@ public class MainActivity extends Activity {
         Turing.setDeath("7.6.1954.");
         Turing.setAbout("Britanski matematičar, kriptograf, teoretičar računarstva");
 
-        showData(Turing);
+        InspiringPerson Lovelace = new InspiringPerson();
+        Lovelace.setName("Ada Lovelace");
+        Lovelace.setBirth("10.12.1815.");
+        Lovelace.setDeath("27.11.1852.");
+        Lovelace.setAbout("Britanska matematičarka");
+
+        InspiringPerson Ritchie = new InspiringPerson();
+        Ritchie.setName("Dennis Ritchie");
+        Ritchie.setBirth("9.9.1941.");
+        Ritchie.setDeath("12.10.2011.");
+        Ritchie.setAbout("Američki računalni znanstvenik");
+
+        showData(Turing, Lovelace, Ritchie);
     }
 
-    private void showData(InspiringPerson person) {
-        this.name = findViewById(R.id.name);
-        name.setText(person.getName());
-        this.birth = findViewById(R.id.birth);
-        birth.setText(person.getBirthDisplay());
-        this.about = findViewById(R.id.about);
-        about.setText(person.getAbout());
+    private void showData(InspiringPerson p1, InspiringPerson p2, InspiringPerson p3) {
+        //Turing
+        name1 = findViewById(R.id.name1);
+        name1.setText(p1.getName());
+        birth1 = findViewById(R.id.birth1);
+        birth1.setText(p1.getBirthDisplay());
+        about1 = findViewById(R.id.about1);
+        about1.setText(p1.getAbout());
+
+        //Lovelace
+        name2 = findViewById(R.id.name2);
+        name2.setText(p2.getName());
+        birth2 = findViewById(R.id.birth2);
+        birth2.setText(p2.getBirthDisplay());
+        about2 = findViewById(R.id.about2);
+        about2.setText(p2.getAbout());
+
+        //Ritchie
+        name3 = findViewById(R.id.name3);
+        name3.setText(p3.getName());
+        birth3 = findViewById(R.id.birth3);
+        birth3.setText(p3.getBirthDisplay());
+        about3 = findViewById(R.id.about3);
+        about3.setText(p3.getAbout());
     }
 }
