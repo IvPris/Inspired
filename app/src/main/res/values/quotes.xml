@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Turing">
+        <item>“Sometimes it is the people no one can imagine anything of who do the things no one can imagine.”</item>
+        <item>“We can only see a short distance ahead, but we can see plenty there that needs to be done.”</item>
+        <item>“Those who can imagine anything, can create the impossible.”</item>
+    </string-array>
+    <string-array name="Lovelace">
+        <item>“That brain of mine is something more than merely mortal, as time will show.”</item>
+        <item>“Religion to me is science, and science is religion.”</item>
+        <item>“Your best and wisest refuge from all troubles is in your science.”</item>
+    </string-array>
+    <string-array name="Ritchie">
+        <item>“UNIX is basically a simple operating system, but you have to be a genius to understand the simplicity”</item>
+        <item>“The only way to learn a new programming language is by writing programs in it.”</item>
+        <item>“C is quirky, flawed, and an enormous success.”</item>
+    </string-array>
+</resources>

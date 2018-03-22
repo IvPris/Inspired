@@ -7,7 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
+import java.util.Random;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -65,13 +65,6 @@ public class MainActivity extends Activity {
             }
         });
 
-        photo1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                displayQuote(1);
-            }
-        });
-
         photo2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -90,17 +83,19 @@ public class MainActivity extends Activity {
     }
 
     private void displayQuote(int i) {
-        String message="";
+        String quote;
+        Random rand = new Random();
+        int n=rand.nextInt(2);
         if (i==1){
-            message = "“Sometimes it is the people no one can imagine anything of who do the things no one can imagine.”";
+            quote = getResources().getStringArray(R.array.Turing)[n];
         }
         else if (i==2){
-            message = "“That brain of mine is something more than merely mortal, as time will show.”";
+            quote = getResources().getStringArray(R.array.Lovelace)[n];
         }
         else {
-            message = "“UNIX is basically a simple operating system, but you have to be a genius to understand the simplicity”";
+            quote = getResources().getStringArray(R.array.Ritchie)[n];
         }
-        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, quote, Toast.LENGTH_LONG).show();
 
     }
 
