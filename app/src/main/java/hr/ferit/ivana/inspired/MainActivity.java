@@ -11,6 +11,7 @@ import java.util.Random;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class MainActivity extends Activity {
     @BindView(R.id.name1) TextView name1;
@@ -18,12 +19,10 @@ public class MainActivity extends Activity {
     @BindView(R.id.about1) TextView about1;
     @BindView(R.id.photo1) ImageView photo1;
 
-
     @BindView(R.id.name2) TextView name2;
     @BindView(R.id.birth2) TextView birth2;
     @BindView(R.id.about2) TextView about2;
     @BindView(R.id.photo2) ImageView photo2;
-
 
     @BindView(R.id.name3) TextView name3;
     @BindView(R.id.birth3) TextView birth3;
@@ -58,45 +57,34 @@ public class MainActivity extends Activity {
         Ritchie.setAbout("Američki računalni znanstvenik");
         Ritchie.setPhoto(R.drawable.dennisritchie);
 
-        photo1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                displayQuote(1);
-            }
-        });
-
-        photo2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                displayQuote(2);
-            }
-        });
-
-        photo3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                displayQuote(3);
-            }
-        });
-
         showData(Turing, Lovelace, Ritchie);
     }
 
-    private void displayQuote(int i) {
+    @OnClick(R.id.photo1)
+    public void displayQuote1(){
         String quote;
         Random rand = new Random();
         int n=rand.nextInt(2);
-        if (i==1){
-            quote = getResources().getStringArray(R.array.Turing)[n];
-        }
-        else if (i==2){
-            quote = getResources().getStringArray(R.array.Lovelace)[n];
-        }
-        else {
-            quote = getResources().getStringArray(R.array.Ritchie)[n];
-        }
+        quote = getResources().getStringArray(R.array.Turing)[n];
         Toast.makeText(this, quote, Toast.LENGTH_LONG).show();
+    }
 
+    @OnClick(R.id.photo2)
+    public void displayQuote2(){
+        String quote;
+        Random rand = new Random();
+        int n=rand.nextInt(2);
+        quote = getResources().getStringArray(R.array.Lovelace)[n];
+        Toast.makeText(this, quote, Toast.LENGTH_LONG).show();
+    }
+
+    @OnClick(R.id.photo3)
+    public void displayQuote3(){
+        String quote;
+        Random rand = new Random();
+        int n=rand.nextInt(2);
+        quote = getResources().getStringArray(R.array.Ritchie)[n];
+        Toast.makeText(this, quote, Toast.LENGTH_LONG).show();
     }
 
     private void showData(InspiringPerson p1, InspiringPerson p2, InspiringPerson p3) {
