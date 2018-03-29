@@ -1,0 +1,47 @@
+Aplikacija s inspirirajucim osobama
+
+- postavljena klasa InspiringPerson s atributima (name (string), birth (string), death (string), about (string), photo(int)) i get, set metodama
+- za birth i death koristen tip podatka String radi jednostavnosti
+- za photo koristen tip podatka int zbog toga sto se pri stvaranju objekta koristi R.drawable.photoname (int)
+
+- dodan butterknife pomocu:
+https://medium.com/@pranaypatel/butterknife-a-viewbinding-library-for-android-beginner-guide-fd92caf8e505
+
+- zbog greske "Conflict with dependency" koristeno je rijesenje opisano na: 
+https://github.com/square/assertj-android/issues/193
+
+- napravljeni objekti klase InspiringPerson, vrijednosti pojedinih atributa dodane pomocu set metoda
+
+- u novu xml datoteku (quotes.xml) dodana 3 string-arraya (3 objekta), svaki string-array ima 3 elementa
+
+- dodane toast poruke na dodir slike, nasumicno se odabire jedan od 3 elementa koji se nalaze u string-arrayu za odredeni objekt:
+https://developer.android.com/guide/topics/ui/notifiers/toasts.html
+
+- dodane slike koje ce se prikazivati za odredene objekte:
+https://stackoverflow.com/questions/28113484/how-do-i-insert-an-image-in-an-activity-with-android-studio
+
+- cijeli layout xml-a stavljen unutar ScrollView elementa
+
+
+Emulator (Nexus 5X API 24 (Android 7.0, API 24))
+
+Vertical view:
+https://pasteboard.co/He6Ps47.png
+https://pasteboard.co/He6PADY.png
+
+Horizontal view:
+https://pasteboard.co/He6PP6m2.png
+https://pasteboard.co/He6PUrZ.png
+https://pasteboard.co/He6Q24C.png
+
+
+Asus Zenfone Selfie ZD551KL (verzija sustava: 6.0.1)
+
+Vertical view:
+https://pasteboard.co/He6Rfnj.jpg
+https://pasteboard.co/He6Rvlk.jpg
+https://pasteboard.co/He6RCQ0.jpg
+
+Horizontal view:
+https://pasteboard.co/He6RlaU.jpg
+https://pasteboard.co/He6RKw0.jpg
