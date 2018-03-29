@@ -2,6 +2,7 @@ package hr.ferit.ivana.inspired;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -36,25 +37,29 @@ public class MainActivity extends Activity {
 
         ButterKnife.bind(this);
 
+        about1.setMovementMethod(new ScrollingMovementMethod());
+        about2.setMovementMethod(new ScrollingMovementMethod());
+        about3.setMovementMethod(new ScrollingMovementMethod());
+
         InspiringPerson Turing = new InspiringPerson();
         Turing.setName("Alan Turing");
         Turing.setBirth("23.6.1912.");
         Turing.setDeath("7.6.1954.");
-        Turing.setAbout("Britanski matematičar, kriptograf, teoretičar računarstva");
+        Turing.setAbout("Britanski matematičar, kriptograf, teoretičar računarstva. 1950. godine je objavio provokativan Turingov test o kojemu se i dan danas vode rasprave. On je također izmislio Turingov stroj i po njemu je Turingova nagrada dobila ime.");
         Turing.setPhoto(R.drawable.alanturing);
 
         InspiringPerson Lovelace = new InspiringPerson();
         Lovelace.setName("Ada Lovelace");
         Lovelace.setBirth("10.12.1815.");
         Lovelace.setDeath("27.11.1852.");
-        Lovelace.setAbout("Britanska matematičarka");
+        Lovelace.setAbout("Britanska matematičarka. Adine bilješke o stroju sadrže ono što se danas smatra prvim algoritmom koji se napravilo da bi ga stroj mogao obraditi. Zbog ovoga ju se smatra prvom računalnom programerkom.");
         Lovelace.setPhoto(R.drawable.adalovelace);
 
         InspiringPerson Ritchie = new InspiringPerson();
         Ritchie.setName("Dennis Ritchie");
         Ritchie.setBirth("9.9.1941.");
         Ritchie.setDeath("12.10.2011.");
-        Ritchie.setAbout("Američki računalni znanstvenik");
+        Ritchie.setAbout("Američki računalni znanstvenik. Ritchie je najpoznatiji kao tvorac programskog jezika C i ključni razvijatelj operacijskog sustava Unix, te kao koautor definitivne knjige o C-u, The C Programming Language.");
         Ritchie.setPhoto(R.drawable.dennisritchie);
 
         showData(Turing, Lovelace, Ritchie);

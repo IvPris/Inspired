@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -31,7 +34,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_toEndOf="@id/photo1"
-        android:layout_below="@id/birth1"/>
+        android:layout_below="@id/birth1"
+        android:layout_alignBottom="@id/photo1"
+        android:scrollbars = "vertical"/>
 
 
     <ImageView
@@ -63,7 +68,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_toEndOf="@id/photo2"
-        android:layout_below="@id/birth2"/>
+        android:layout_below="@id/birth2"
+        android:layout_alignBottom="@id/photo2"
+        android:scrollbars = "vertical"/>
 
 
     <ImageView
@@ -95,5 +102,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_toEndOf="@id/photo3"
-        android:layout_below="@id/birth3"/>
+        android:layout_below="@id/birth3"
+        android:layout_alignBottom="@id/photo3"
+        android:scrollbars = "vertical"/>
 </RelativeLayout>
+</ScrollView>
